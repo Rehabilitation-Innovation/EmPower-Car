@@ -159,7 +159,7 @@ void loop() {
     int ButtonMode = digitalRead(ModeSwitch);       //Mode select: High = buttons, Low = joystick
 
     outputValueX = getOutputValue(joystickPinX, buttonPinX1, buttonPinX2, ButtonMode, true, Speed); // get X inputs and apply voltage compensation
-    outputValueY = getOutputValue(joystickPinY, buttonPinY1, buttonPinY2, ButtonMode, true, Speed); // get Y inputs and apply voltage compensation
+    outputValueY = -1 * getOutputValue(joystickPinY, buttonPinY1, buttonPinY2, ButtonMode, true, Speed); // get Y inputs and apply voltage compensation
 
     //=============================== Uncomment to see speed pot and joystick signal values
     //Serial.print("speed= ");
